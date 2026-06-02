@@ -1,7 +1,20 @@
 ---
-title: "mzhao.github.io"
+title: "Megan Zhao"
+image: media/shrew-epicsauce.jpg
+toc: false
+about:
+  template: trestles
+  image-shape: round
+  image-width: 17em
+  links:
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/meganzhao06/
+      target: _blank
+    - text: GitHub
+      href: https://https://github.com/meandmymonky
+      target: _blank
+    - text: Email
+      href: mailto:meganzhao.06@gmail.com
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+bello I am megan
