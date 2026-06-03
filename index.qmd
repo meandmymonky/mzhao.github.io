@@ -1,20 +1,28 @@
 ---
+# title: "Megan Zhao"
 title: "Megan Zhao"
+# imbeding image - professional headshot
 image: media/shrew-epicsauce.jpg
 toc: false
 about:
   template: trestles
   image-shape: round
   image-width: 17em
+  # creating buttons
   links:
-    - text: LinkedIn
-      href: https://www.linkedin.com/in/meganzhao06/
-      target: _blank
-    - text: GitHub
-      href: https://https://github.com/meandmymonky
-      target: _blank
-    - text: Email
+    - icon: envelope
+      text: Email
       href: mailto:meganzhao.06@gmail.com
+    - icon: linkedin 
+      text: LinkedIn
+      href: https://www.linkedin.com/in/meganzhao06/
+      # open link in a new browser tab
+      target: _blank
+    - icon: github
+      text: GitHub
+      href: https://https://github.com/meandmymonky
+      # open link in a new browser tab
+      target: _blank
 ---
 
 bello I am megan
