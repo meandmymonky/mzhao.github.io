@@ -5,7 +5,7 @@ project:
 website:
   title: "Megan Zhao"
   # change this - tab icon
-  favicon: media/shrew-epicsauce.jpg 
+  favicon: media/shrew-epicsauce.jpg
   navbar:
     left:
       - href: index.qmd
