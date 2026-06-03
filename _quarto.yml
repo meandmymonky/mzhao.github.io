@@ -16,6 +16,8 @@ website:
         text: CV/Resume
       - href: misc.qmd
         text: Photos
+  page-footer: 
+    right: Copyright 2026, Megan Zhao
 
 format:
   html:
