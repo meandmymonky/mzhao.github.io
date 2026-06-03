@@ -24,9 +24,13 @@ website:
 format:
   html:
     theme:
-      light: flatly
-      dark: darkly
-    css: styles.css
+      light:
+        - flatly
+        - styles.scss
+      dark: 
+        - darkly
+        - styles.scss
+    css: styles.scss
     toc: true
     page-layout: full
 
