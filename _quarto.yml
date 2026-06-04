@@ -5,7 +5,7 @@ project:
 website:
   title: "Megan Zhao"
   # adding tab icon
-  favicon: media/monkey-logo.png
+  favicon: media/monkey-logo-color.png
   navbar:
     title: false
     # adding navbar icon

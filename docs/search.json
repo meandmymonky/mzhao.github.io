@@ -4,13 +4,34 @@
     "href": "index.html",
     "title": "Megan Zhao",
     "section": "",
-    "text": "BIO\nHello! My name is Megan, and I am an undergraduate pre-law student in my second year at UC Santa Barbara. I am majoring in Environmental Studies, Geography, and Philosophy, with a minor in Legal Humanities. Within my fields of study, I have a particular interest in environmental policy, and love exploring how ecological research and innovations intersect with legislation to create feasible and sustainable environmental solutions. In particular, I hope to further explore the ecological processes behind larger ecosystemic regulation, and use those explorations to create feasible legislative actions pertaining to endangered species policy.\n\n\nCURRENTLY\nAt the moment, I am seeking employment opportunities in conservation research and environmental policy. Since 2025, I have worked with Ken Hiltner at UCSB as an Undergraduate Research Assistant, approaching historical and modern media from an ecocritical perspective, and exploring the impacts our media has had on our modern environmental perceptions. Outside of UCSB, I have been conducting personal research about the ecological impacts of invasive shrew-species on island locales since 2023, specifically focusing on the Irish Isles and the effects nonnative greater-white-toothed shrews have had on the local ecology.\nI’m always excited for the opportunity to collaborate on new/existing projects with others. Please feel free reach out if you are interested in connecting, working together, or just saying hi!\n\n\nEDUCATION\n BS in Environmental Studies, 2028\nUniversity of California, Santa Barbara\n BA in Geography: Geographic Information Science (GIS), 2028\nUniversity of California, Santa Barbara\n BA in Philosophy: Ethics and Public Policy, 2028\nUniversity of California, Santa Barbara"
+    "text": "BIO\nHello! My name is Megan. Currently, I am an undergraduate student at University of California, Santa Barbara, exploring the intersection between scientific ecology and developing policy. Feel free to explore, and learn a bit more about me and my work!\n\n\n\nEDUCATION\n BS in Environmental Studies, 2028\nUniversity of California, Santa Barbara\n BA in Geography: Geographic Information Science (GIS), 2028\nUniversity of California, Santa Barbara\n BA in Philosophy: Ethics and Public Policy, 2028\nUniversity of California, Santa Barbara"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "header 1\nAbout this site\n\nthis is boiii\n\n\nbah bah boiii\n\n\nSome element (e.g. text) to style\n\nSome text with just this section styled\nOutside of school and work, I love exploring the outdoors, listening to music, and spending time with those close to me."
+    "text": "A little more about me, both inside and outside of work!"
+  },
+  {
+    "objectID": "about.html#currently",
+    "href": "about.html#currently",
+    "title": "About Me",
+    "section": "CURRENTLY",
+    "text": "CURRENTLY\nAt the moment, I am seeking employment opportunities in conservation research and environmental policy. Since 2025, I have worked with Ken Hiltner at UCSB as an Undergraduate Research Assistant, approaching historical and modern media from an ecocritical perspective, and exploring the impacts our media has had on our modern environmental perceptions. Outside of UCSB, I have been conducting personal research about the ecological impacts of invasive shrew-species on island locales since 2023, specifically focusing on the Irish Isles and the effects nonnative greater-white-toothed shrews have had on the local ecology."
+  },
+  {
+    "objectID": "about.html#im-always-excited-for-the-opportunity-to-collaborate-on-newexisting-projects-with-others.-please-feel-free-reach-out-if-you-are-interested-in-connecting-working-together-or-even-just-to-say-hi",
+    "href": "about.html#im-always-excited-for-the-opportunity-to-collaborate-on-newexisting-projects-with-others.-please-feel-free-reach-out-if-you-are-interested-in-connecting-working-together-or-even-just-to-say-hi",
+    "title": "About Me",
+    "section": "I’m always excited for the opportunity to collaborate on new/existing projects with others. Please feel free reach out if you are interested in connecting, working together, or even just to say hi!",
+    "text": "I’m always excited for the opportunity to collaborate on new/existing projects with others. Please feel free reach out if you are interested in connecting, working together, or even just to say hi!"
+  },
+  {
+    "objectID": "about.html#boiii",
+    "href": "about.html#boiii",
+    "title": "About Me",
+    "section": "BOIII",
+    "text": "BOIII\nOutside of school and work, I love exploring the outdoors, listening to music, and spending time with those close to me."
   }
 ]
