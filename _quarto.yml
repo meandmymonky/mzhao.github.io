@@ -5,11 +5,11 @@ project:
 website:
   title: "Megan Zhao"
   # adding tab icon
-  favicon: media/monkey-logo-color.png
+  favicon: media/monkey-drawing-bw.png
   navbar:
     title: false
     # adding navbar icon
-    logo: media/monkey-logo.png
+    logo: media/monkey-drawing.png
     left:
       - href: index.qmd
         text: Home

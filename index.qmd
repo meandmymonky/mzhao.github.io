@@ -24,10 +24,7 @@ about:
       # open link in a new browser tab
       target: _blank
 ---
-
-# BIO
-
-Hello! My name is Megan. Currently, I am an undergraduate student at University of California, Santa Barbara, exploring the intersection between scientific ecology and policy development. Feel free to explore, and learn a bit more [about me](https://meandmymonky.github.io/mzhao.github.io/about.html) and my work!
+<p style = "font-size: 22px;"> Hello! My name is Megan. Currently, I am an undergraduate student at University of California, Santa Barbara, with a passion for exploring the intersection between scientific ecology and policy development. Feel free to explore this website, and learn a bit more [about me](https://meandmymonky.github.io/mzhao.github.io/about.html) and my work! </p>
 
 ---
 
