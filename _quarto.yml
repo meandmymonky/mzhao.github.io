@@ -4,9 +4,12 @@ project:
 
 website:
   title: "Megan Zhao"
-  # change this - tab icon
-  favicon: media/shrew-epicsauce.jpg
+  # adding tab icon
+  favicon: media/monkey-logo.png
   navbar:
+    title: false
+    # adding navbar logo
+    logo: media/monkey-logo.png
     left:
       - href: index.qmd
         text: Home
@@ -30,6 +33,7 @@ format:
       dark: 
         - darkly
         - styles.scss
+    mainfont: Elms Sans
     css: styles.scss
     toc: true
     page-layout: full

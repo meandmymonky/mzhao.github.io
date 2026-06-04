@@ -1,5 +1,13 @@
 ---
 title: "About Me"
 ---
-
+# header 1
 About this site
+
+<p class = "title"> this is boiii </p>
+
+<p class = "center-text"> bah bah boiii </p>
+<div class="title">
+  Some element (e.g. text) to style
+</div>
+Some text with just [this section]{.title} styled

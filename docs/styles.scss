@@ -1,6 +1,12 @@
 /*-- scss:defaults --*/
 
+// Import Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 // Colors
+
+// custom color labels
 $dark-green: #363c32;
 $dg-contrast: #a0ada9;
 $green: #606c38;
@@ -10,10 +16,46 @@ $o-constrast: #fce4c0;
 $cream: #fefae0;
 $c-constrast: #301e01;
 
-// Base document colors
+// Base Document Colors
+
+// navbar background: dark-green
 $navbar-bg: $dark-green;
+// navbar foreground: dg-contrast
 $navbar-fg: $dg-contrast;
+// navbar highlight: cream
 $navbar-hl: $cream;
 
-// font adjustment
-$h1-font-size: 2rem;
+// Fonts
+
+// label "Encode Sans Semi Expanded" font: "$esse"
+$esse: "Encode Sans Semi Expanded", sans-serif;
+
+/*-- scss:rules --*/
+
+// create h1 command
+h1 {
+  // h1 font: esse
+  font-family: $esse;
+  // h1 spacing: 1.5x
+  letter-spacing: 1.5px;
+  // h1 font weight: 625
+  font-weight: 625;
+}
+
+// create .title command
+.title {
+  // .title text: orange
+  color: $orange;
+}
+
+// create .center-text command
+.center-text {
+  // .center-text: centered
+  text-align: center;
+}
+
+// customize navbar image dimensions
+.navbar-brand img {
+  max-height: 40px;
+  width: auto;
+}
