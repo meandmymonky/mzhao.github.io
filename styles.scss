@@ -2,7 +2,7 @@
 
 // Import Fonts
 
-@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 // Colors
 
@@ -32,23 +32,28 @@ $link-color: $green;
 // label "Encode Sans Semi Expanded" font: "$esse"
 $esse: "Encode Sans Semi Expanded", sans-serif;
 
+// label "Playfair Display" font: "$pd"
+$pd: "Playfair Display", serif;
+
 /*-- scss:rules --*/
 
 // create h1 command
 h1 {
   // h1 font: esse
   font-family: $esse;
-  // h1 spacing: 1.5x
+  // h1 spacing: 1.5px
   letter-spacing: 1.5px;
   // h1 font weight: 625
   font-weight: 625;
 }
 
-// creat h2 command
+// create h2 command
 h2 {
 //h2 font: esse
 font-family: $esse;
+// h2 spacing: 1.5px
 letter-spacing: 1.5px;
+// h2 font weight: 550
 font-weight: 550;
 }
 
@@ -63,6 +68,7 @@ font-weight: 550;
   // .center-text: centered
   text-align: center;
 }
+
 
 // customize navbar image dimensions
 .navbar-brand img {

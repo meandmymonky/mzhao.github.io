@@ -7,7 +7,7 @@ toc: false
 about:
   template: trestles
   image-shape: round
-  image-width: 17em
+  image-width: 18em
   # creating buttons
   links:
     - icon: envelope
@@ -27,7 +27,7 @@ about:
 
 # BIO
 
-Hello! My name is Megan. Currently, I am an undergraduate student at University of California, Santa Barbara, exploring the intersection between scientific ecology and developing policy. Feel free to explore, and learn a bit more [about me](https://meandmymonky.github.io/mzhao.github.io/about.html) and my work!
+Hello! My name is Megan. Currently, I am an undergraduate student at University of California, Santa Barbara, exploring the intersection between scientific ecology and policy development. Feel free to explore, and learn a bit more [about me](https://meandmymonky.github.io/mzhao.github.io/about.html) and my work!
 
 ---
 
