@@ -17,7 +17,7 @@ I'm always looking forward for the opportunity to collaborate on new/existing pr
 # INTERESTS AND HOBBIES
 <p style ="font-family: 'Playfair Display', serif;" p class = "title"> “Nature's creative power is far beyond man's instinct of destruction.” </p> <p style = "font-size: 14px;"> \- Jules Verne, *Twenty Thousand Leagues Under the Sea* </p>
 
-Outside of school and work, I love listening to music and exploring the outdoors. As an ES major, I am constantly exposed to the fact that our anthropogenic actions have created a persistent underlying threat to our environments. Subsequently, I think it is extremely important -- now more than ever -- for people to go outside, appreciate our natural landscapes, and see what it is that we need to preserve, protect, and restore. California is a locale that is especially great for this, bolstering with some of the richest diversities of nature, something I am constantly grateful for! Some of my favorite outdoor activities include climbing, fishing, and hiking. 
+Outside of school and work, I love listening to music, playing games, and exploring the outdoors. As an ES major, I am constantly exposed to the fact that our anthropogenic actions have created a persistent underlying threat to our environments. Subsequently, I think it is extremely important -- now more than ever -- for people to go outside, appreciate our natural landscapes, and see what it is that we need to preserve, protect, and restore. California is a locale that is especially great for this, bolstering with some of the richest diversities of nature, something I am constantly grateful for! Some of my favorite outdoor activities include climbing, hiking, and fishing. 
 
 ## CLIMBING
 I started climbing when I came to Santa Barbara. It's quickly become one of my favorite sports, in part due to the problem-solving physical aspect of it, and in part due to the wonderful community that I've found. Within UCSB, I am an officer on the [Climbing Team](https://recreation.ucsb.edu/sport-club/coed-climbing){target="_blank"}, as well as an employee at the ACC -- or [Adventure Climbing Center](https://recreation.ucsb.edu/adventure-programs/adventure-climbing-center){target="_blank"} -- the on-campus recreational climbing center. Personally, I think that climbing is one of the best ways to both meet new people, and to spend some time outdoors!
@@ -32,25 +32,14 @@ I started climbing when I came to Santa Barbara. It's quickly become one of my f
 
 Here are some pictures from my recent trip to joshua tree. If you're interested, you can see more about this trip on the UCSB climbing team instagram [{{< fa camera title= "camera" >}}](https://www.instagram.com/ucsbclimbing/){target="_blank"} (which I run!)
 
+## HIKING
+Climbing outdoors is great. But sometimes it's nice to just enjoy the nature without having to throw yourself at a wall. I also love hiking with friends, and exploring beyond the crag!
 
+[hiking map]
 
+Here are some of my favorite and recent hikes that I've done.
 
 ## FISHING
+When I was younger, my parents would often take my brother and I fishing. My father is from Qingdao, and grew up fishing and swimming by the beach, an experience that he wanted us to have as well. Unfortunately, each of us only picked up one half of that -- my brother is great at fishing but can't really swim while I did swim team and can't really fish. But despite the fact that I'm *horrible* at fishing, I still love going out to the water to do some angling -- hopefully I'll get better soon!
 
-
-
-
-
-
-
-<p class = "title"> this is boiii </p>
-
-<p class = "center-text"> bah bah boiii </p>
-<div class="title">
-  Some element (e.g. text) to style
-</div>
-Some text with just [this section]{.title} styled
-
-
-
-Outside of school and work, I love exploring the outdoors, listening to music, and spending time with those close to me. 
+[fishing minigame - catch fish and tell info abt it -- all of the fish will be ones that I have caught before]
