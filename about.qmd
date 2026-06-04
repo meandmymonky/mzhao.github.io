@@ -5,7 +5,7 @@ subtitle: "*A little more about me, both in and out of work*"
 # EDUCATION AND RESEARCH
 I am currently an undergraduate pre-law student in my second year at UC Santa Barbara, majoring in [Environmental Studies](https://es.ucsb.edu/){target="_blank"}, [Geography](https://www.geog.ucsb.edu/){target="_blank"}, and [Philosophy](https://www.philosophy.ucsb.edu/){target="_blank"}, with a minor in [Legal Humanities](https://www.duels.ucsb.edu/minors/legal-humanities-minor){target="_blank"}. Within my fields of study, I have a particular interest in environmental policy, and love exploring how ecological research and innovations intersect with legislation to create feasible and sustainable environmental solutions. In particular, I hope to further explore the ecological processes behind larger ecosystemic regulation, and use those explorations to facilitate actionable legislative decisions pertaining to endangered species policy.
 
-## CURRENTLY
+## WORK
 At the moment, I am seeking employment opportunities in conservation research and environmental policy. Since 2025, I have worked with [Ken Hiltner](https://english.ucsb.edu/people/faculty/hiltner-ken/){target="_blank"} at UCSB as an Undergraduate Research Assistant, using ecocritical perspectives and methods to approach historical and modern media, then exploring the impacts this media has had on our modern environmental perceptions. Outside of UCSB, I have been conducting personal research about the ecological impacts of invasive shrew-species on island locales since 2023, specifically focusing on the Irish Isles and the effects nonnative greater-white-toothed shrews have had on the local ecology. 
 
 I'm always looking forward for the opportunity to collaborate on new/existing projects with others. Please feel free reach out if you are interested in connecting, working together, or just to say hi! 
@@ -13,8 +13,7 @@ I'm always looking forward for the opportunity to collaborate on new/existing pr
 
 ---
 # INTERESTS AND HOBBIES
-<p style ="font-family: 'Playfair Display', serif;" p style = "font-size: 700px;" p class = "title"> “Nature's creative power is far beyond man's instinct of destruction.” </p>
-<p style = "font-size: 15px;"> \- Jules Verne, *Twenty Thousand Leagues Under the Sea* </p>
+<p style ="font-family: 'Playfair Display', serif;" p style = "font-size: 700px;" p class = "title"> “Nature's creative power is far beyond man's instinct of destruction.” </p> <p style = "font-size: 15px;"> \- Jules!srefd Verne, *Twenty Thousand Leagues Under the Sea* </p>
 
 
 Outside of school and work, I also love exploring the outdoors.  California has an incredibly rich diversity of nature, which I am constantly grateful for! Some of my favorite outdoor activities include climbing, fishing, and hiking. 
