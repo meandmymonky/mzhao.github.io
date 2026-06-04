@@ -11,3 +11,6 @@ About this site
   Some element (e.g. text) to style
 </div>
 Some text with just [this section]{.title} styled
+
+
+Outside of school and work, I love exploring the outdoors, listening to music, and spending time with those close to me. 

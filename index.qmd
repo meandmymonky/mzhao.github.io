@@ -25,4 +25,14 @@ about:
       target: _blank
 ---
 
-bello I am megan
+# BIO
+I am an undergraduate pre-law student in my second year at UC Santa Barbara. Currently, I am majoring in [Environmental Studies](https://es.ucsb.edu/), [Geography](https://www.geog.ucsb.edu/), and [Philosophy](https://www.philosophy.ucsb.edu/), with a minor in [Legal Humanities](https://www.duels.ucsb.edu/minors/legal-humanities-minor). I have an interest in environmental policy, and love exploring how ecological research and innovations intersect with legislation to create feasible and sustainable environmental solutions! In particular, I hope to explore the ecological processes behind ecosystemic regulation, and apply those explorations to feasible legislative actions pertaining to endangered species policy.
+
+# CURRENTLY
+At the moment, I am seeking employment opportunities in conservation research and environmental policy. I am currently working with [Ken Hiltner](https://english.ucsb.edu/people/faculty/hiltner-ken/) at UCSB as an Undergraduate Research Assistant, approaching historical and modern media from an ecocritical perspective, and exploring the impacts our media has had on our modern environmental perceptions. Outside of UCSB, I have been conducting personal research about the ecological impacts of invasive shrew-species on island locales since 2023, specifically focusing on the Irish Isles and the effects nonnative greater-white-toothed shrews have had on the local ecology.
+
+I'm always excited for the opportunity to collaborate on new/existing projects with others. Please feel free reach out if you are interested in connecting, working together, or just saying hi! 
+
+# EDUCATION
+
+icon: graduation-cap

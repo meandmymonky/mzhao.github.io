@@ -8,7 +8,7 @@ website:
   favicon: media/monkey-logo.png
   navbar:
     title: false
-    # adding navbar logo
+    # adding navbar icon
     logo: media/monkey-logo.png
     left:
       - href: index.qmd
