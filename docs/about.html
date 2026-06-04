@@ -48,6 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-ff18db7143adb970840558f03860643c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-c23fc74e4f36bbe836323fb29574e83b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-ff18db7143adb970840558f03860643c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -351,13 +354,14 @@ ul.task-list li input[type="checkbox"] {
 <p style="font-family: 'Playfair Display', serif;" p="" class="title">
 “Nature’s creative power is far beyond man’s instinct of destruction.”
 </p>
-<p style="font-size: 15px;">
-- Jules!srefd Verne, <em>Twenty Thousand Leagues Under the Sea</em>
+<p style="font-size: 14px;">
+- Jules Verne, <em>Twenty Thousand Leagues Under the Sea</em>
 </p>
-<p>Outside of school and work, I also love exploring the outdoors. California has an incredibly rich diversity of nature, which I am constantly grateful for! Some of my favorite outdoor activities include climbing, fishing, and hiking.</p>
+<p>Outside of school and work, I love listening to music and exploring the outdoors. As an ES major, I am constantly exposed to the fact that our anthropogenic actions have created a persistent underlying threat to our environments. Subsequently, I think it is extremely important – now more than ever – for people to go outside, appreciate our natural landscapes, and see what it is that we need to preserve, protect, and restore. California is a locale that is especially great for this, bolstering with some of the richest diversities of nature, something I am constantly grateful for! Some of my favorite outdoor activities include climbing, fishing, and hiking.</p>
 <section id="climbing" class="level2">
 <h2 class="anchored" data-anchor-id="climbing">CLIMBING</h2>
-<p>Within UCSB, I am an officer on the Climbing Team, as well as an employee at the ACC – or <a href="https://recreation.ucsb.edu/adventure-programs/adventure-climbing-center" target="_blank">Adventure Climbing Center</a> – the on-campus recreational climbing center. Climbing is a great way to both meet new people, and to get outdoors!</p>
+<p>I started climbing when I came to Santa Barbara. It’s quickly become one of my favorite sports, in part due to the problem-solving physical aspect of it, and in part due to the wonderful community that I’ve found. Within UCSB, I am an officer on the <a href="https://recreation.ucsb.edu/sport-club/coed-climbing" target="_blank">Climbing Team</a>, as well as an employee at the ACC – or <a href="https://recreation.ucsb.edu/adventure-programs/adventure-climbing-center" target="_blank">Adventure Climbing Center</a> – the on-campus recreational climbing center. Personally, I think that climbing is one of the best ways to both meet new people, and to spend some time outdoors!</p>
+<p><a href="media/filip-climbing.JPG" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="boi"><img src="media/filip-climbing.JPG" class="img-fluid" alt="boi"></a> <img src="media/satellite-freesolo.JPG" class="img-fluid" alt="boi2"> <img src="media/bree-climbing.JPG" class="img-fluid" alt="boi3"></p>
 <p class="title">
 this is boiii
 </p>
@@ -808,6 +812,38 @@ bah bah boiii
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
