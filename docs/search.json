@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
+    "objectID": "posts.html",
+    "href": "posts.html",
     "title": "Projects",
     "section": "",
-    "text": "boi\nenvs 155 final proj notes - use WIDE diversity of sources – like six sources bruhhh boi boi bah boi - central theme: what you identify in section 1 links to section 2, etc. - try not to repeat yourself - be as thorough and concise as you can\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "ENVS 193DS Homework Assignment 03\n\n\n\nCoding\n\nR\n\n\n\nThis is a homework assignment from my ENVS 193DS class, intended to help develop experience working with dataframes. It includes practicing correlation visualization…\n\n\n\nMegan Zhao\n\n\nMay 28, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nLegal Analysis: Naples California\n\n\n\nWriting\n\n\n\nThis is a legal analysis representing the Gaviota Coastal Council, the Environmental Defense Center, and the Surfrider Foundation, opposing the plan of residential private…\n\n\n\nMegan Zhao\n\n\nMay 27, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/ENVS 125C Naples Legal Analysis/index.html",
+    "href": "posts/ENVS 125C Naples Legal Analysis/index.html",
+    "title": "Legal Analysis: Naples California",
+    "section": "",
+    "text": "You can also read the paper here: Legal Analysis - Naples California"
   },
   {
     "objectID": "map-draft.html",
@@ -32,14 +39,14 @@
     "href": "about.html#climbing",
     "title": "About Me",
     "section": "CLIMBING",
-    "text": "CLIMBING\nI started climbing when I came to Santa Barbara. It’s quickly become one of my favorite sports, in part due to the problem-solving physical aspect of it, and in part due to the wonderful community that I’ve found. Within UCSB, I am an officer on the Climbing Team, as well as an employee at the ACC – or Adventure Climbing Center – the on-campus recreational climbing center. Personally, I think that climbing is one of the best ways to both meet new people, and to spend some time outdoors!\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere are some pictures from my recent trip to joshua tree. If you’re interested, you can see more about this trip on the UCSB climbing team instagram  (which I run!)"
+    "text": "CLIMBING\nI started climbing when I came to Santa Barbara. It’s quickly become one of my favorite sports, in part due to the problem-solving physical aspect of it, and in part due to the wonderful community that I’ve found. Within UCSB, I am an officer on the Climbing Team, as well as an employee at the ACC – or Adventure Climbing Center – the on-campus recreational climbing center. Personally, I think that climbing is one of the best ways to both meet new people, and to spend some time outdoors!\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere are some pictures from my recent trip to Joshua Tree. If you’re interested, you can see more about this trip on the UCSB climbing team instagram  (which I run!)"
   },
   {
     "objectID": "about.html#hiking",
     "href": "about.html#hiking",
     "title": "About Me",
     "section": "HIKING",
-    "text": "HIKING\nClimbing outdoors is great. But sometimes it’s nice to just enjoy the nature without having to throw yourself at a wall. I also love hiking with friends, and exploring beyond the crag!\n[hiking map]\nHere are some of my favorite and recent hikes that I’ve done."
+    "text": "HIKING\nClimbing outdoors is great. But sometimes it’s nice to just enjoy the nature without having to throw yourself at a wall. I also love hiking with friends, and exploring beyond the crag!\n[hiking map]\n\n#| label: reading-packages\n\n# importing packages\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.1     ✔ readr     2.2.0\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.3     ✔ tibble    3.3.1\n✔ lubridate 1.9.5     ✔ tidyr     1.3.2\n✔ purrr     1.2.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(plotly)\n\n\nAttaching package: 'plotly'\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\nThe following object is masked from 'package:stats':\n\n    filter\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\nlibrary(DT)\nlibrary(leaflet)\nlibrary(leaflet.extras) \nlibrary(sf)\n\nLinking to GEOS 3.14.1, GDAL 3.12.1, PROJ 9.7.1; sf_use_s2() is TRUE\n\n\n\n#| label: cleaning-sp\n\n# creating object: santa_paula\nsanta_paula &lt;- \"Punchbowls_via_Santa_Paula_and_Last_Chance_Trail.gpx\"\n# creating layers\nst_layers(santa_paula)\n\nDriver: GPX \nAvailable layers:\n    layer_name     geometry_type features fields crs_name\n1    waypoints             Point        0     23   WGS 84\n2       routes       Line String        0     12   WGS 84\n3       tracks Multi Line String        1     12   WGS 84\n4 route_points             Point        0     25   WGS 84\n5 track_points             Point     3040     26   WGS 84\n\n# creating object: sp_track\nsp_track &lt;- read_sf(santa_paula, \n                    # use track_points data\n                    layer = \"track_points\") |&gt; \n  # separate time column\n  separate(col = time, \n           # date category\n            into = c(\"date\",\n                     # time point category\n                     \"timepoint\"), \n            sep = \" \", \n            remove = FALSE)\n\n#| label: cleaning-db\n# creating object: devils_bridge\ndevils_bridge &lt;- \"Devils_Bridge_via_Mescal_Trailhead.gpx\"\n# creating layers\nst_layers(devils_bridge)\n\nDriver: GPX \nAvailable layers:\n    layer_name     geometry_type features fields crs_name\n1    waypoints             Point        0     23   WGS 84\n2       routes       Line String        0     12   WGS 84\n3       tracks Multi Line String        1     12   WGS 84\n4 route_points             Point        0     25   WGS 84\n5 track_points             Point     1085     26   WGS 84\n\n# creating object: db_track\ndb_track &lt;- read_sf(devils_bridge, \n                    # use track_points data\n                    layer = \"track_points\") |&gt; \n  # separate time column\n  separate(col = time, \n           # date category\n            into = c(\"date\",\n                     # time point category\n                     \"timepoint\"), \n            sep = \" \", \n            remove = FALSE)\n\n#| label: cleaning-hs\n# creating object: devils_bridge\nhotsprings &lt;- \"Hot_Springs_Trail_and_Edison_Catway.gpx\"\n# creating layers\nst_layers(hotsprings)\n\nDriver: GPX \nAvailable layers:\n    layer_name     geometry_type features fields crs_name\n1    waypoints             Point        0     23   WGS 84\n2       routes       Line String        0     12   WGS 84\n3       tracks Multi Line String        1     12   WGS 84\n4 route_points             Point        0     25   WGS 84\n5 track_points             Point      823     26   WGS 84\n\n# creating object: db_track\nhs_track &lt;- read_sf(hotsprings, \n                    # use track_points data\n                    layer = \"track_points\") |&gt; \n  # separate time column\n  separate(col = time, \n           # date category\n            into = c(\"date\",\n                     # time point category\n                     \"timepoint\"), \n            sep = \" \", \n            remove = FALSE)\n\n#| label: cleaning-ac\n# creating object: antelope_canyon\nantelope_canyon &lt;- \"Upper_Antelope_Canyon_Trail.gpx\"\n# creating layers\nst_layers(antelope_canyon)\n\nDriver: GPX \nAvailable layers:\n    layer_name     geometry_type features fields crs_name\n1    waypoints             Point        0     23   WGS 84\n2       routes       Line String        0     12   WGS 84\n3       tracks Multi Line String        1     12   WGS 84\n4 route_points             Point        0     25   WGS 84\n5 track_points             Point      923     26   WGS 84\n\n# creating object: db_track\nac_track &lt;- read_sf(antelope_canyon, \n                    # use track_points data\n                    layer = \"track_points\") |&gt; \n  # separate time column\n  separate(col = time, \n           # date category\n            into = c(\"date\",\n                     # time point category\n                     \"timepoint\"), \n            sep = \" \", \n            remove = FALSE)\n\ntrail_points &lt;- data.frame(\n  lat = c(34.462712, 34.8977, 34.4547, 36.8625),\n  lng = c(-119.640097, -111.8077, -119.0557, -111.3747),\n  label = c(\"Santa Paula Punchbowls\", \"Devils Bridge\", \"Hot Springs\", \"Antelope Canyon\")\n)\n\n\n#| label: ggplots\n\n# ggplot: sp_track data\nggplot(sp_track) +\n  # layer one: sf\n  geom_sf() +\n  # changing theme\n  theme_bw()\n\n\n\n\n\n\n\n# ggplot: db_track data\nggplot(db_track) +\n  # layer one: sf\n  geom_sf() +\n  # changing theme\n  theme_bw()\n\n\n\n\n\n\n\n# ggplot: hs_track data\nggplot(hs_track) +\n  # layer one: sf\n  geom_sf() +\n  # changing theme\n  theme_bw()\n\n\n\n\n\n\n\n# ggplot: ac_track data\nggplot(ac_track) +\n  # layer one: sf\n  geom_sf() +\n  # changing theme\n  theme_bw()\n\n\n\n\n\n\n\n\n\n#| label: base-map\n\n# create trail map\ntrail_map &lt;- leaflet(trail_points) |&gt; \n  # use ESRI background\n  addProviderTiles(providers$Esri.WorldImagery) |&gt; \n  addMarkers(lng = ~lng,\n             lat = ~lat,\n             popup = ~label,\n             clusterOptions = markerClusterOptions()\n) |&gt; \n  # adding mini map\n  addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |&gt; \n  setView(lng =  -117.5, lat = 38.5, zoom = 5) |&gt; \n    # reset map button\n  leaflet.extras::addResetMapButton()\n\n# printing map\ntrail_map\n\n\n\n\n\n\n#| label: creating-trails\n\nsp_trail &lt;- sp_track |&gt; \n  st_combine() |&gt; \n  st_cast(to = \"LINESTRING\") |&gt; \n  st_sf()\n\ndb_trail &lt;- db_track |&gt; \n  st_combine() |&gt; \n  st_cast(to = \"LINESTRING\") |&gt; \n  st_sf()\n\nhs_trail &lt;- hs_track |&gt; \n  st_combine() |&gt; \n  st_cast(to = \"LINESTRING\") |&gt; \n  st_sf()\n\nac_trail &lt;- ac_track |&gt; \n  st_combine() |&gt; \n  st_cast(to = \"LINESTRING\") |&gt; \n  st_sf()\n\n\n#| label: adding-hikes\n\ntrail_map |&gt; \n  addPolylines(data = sp_trail,\n               color = \"chartreuse\",\n               weight = 2,\n               opacity = 1.0) |&gt; \n  addPolylines(data = db_trail,\n               color = \"chartreuse\",\n               weight = 2,\n               opacity = 1.0) |&gt; \n  addPolylines(data = hs_trail,\n               color = \"chartreuse\",\n               weight = 2,\n               opacity = 1.0) |&gt; \n  addPolylines(data = ac_trail,\n               color = \"chartreuse\",\n               weight = 2,\n               opacity = 1.0)\n\n\n\n\n\n\n# saving the prepared leaflet plot as a html file\nhtmltools::save_html(trail_map, \"trail.html\")\n\nHere are some of my favorite and recent hikes that I’ve done."
   },
   {
     "objectID": "about.html#fishing",
@@ -54,5 +61,131 @@
     "title": "Megan Zhao",
     "section": "",
     "text": "Hello! My name is Megan. Currently, I am an undergraduate student at University of California, Santa Barbara, with a passion for exploring the intersection between scientific ecology and policy development. Feel free to explore this website, and learn a bit more about me and my work!\n\n\n\nEDUCATION\n BS in Environmental Studies, 2028\nUniversity of California, Santa Barbara\n BA in Geography: Geographic Information Science (GIS), 2028\nUniversity of California, Santa Barbara\n BA in Philosophy: Ethics and Public Policy, 2028\nUniversity of California, Santa Barbara"
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html",
+    "href": "posts/ENVS 193DS HW 03/index.html",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "",
+    "text": "ENVS 193DS - HW 03"
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#a.",
+    "href": "posts/ENVS 193DS HW 03/index.html#a.",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "a.",
+    "text": "a.\nThe appropriate tests to determine the strength of the relationship between temperature and giant kelp frond elongation rate are the Pearson’s correlation test and the Spearman rank correlation test. While both tests can be used to determine relationship strength, Pearson’s correlation is parametric, assuming continuous and normally distributed variables with independent observations, and explores the linear relationship between variables. On the other hand, the Spearman rank correlation is non-parametric, assuming independent observations, and explores the monotonic relationship between variables."
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#b.",
+    "href": "posts/ENVS 193DS HW 03/index.html#b.",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "b.",
+    "text": "b.\n\n# base layer: ggplot\nggplot(\n  # starting data frame\n  data = kelp,\n  # x-axis\n  mapping = aes(x = temp_c,\n                # y-axis\n                y = kelp_elong)\n) +\n  # first layer: points\n  geom_point(\n    # coloring points\n    color = 'chartreuse4',\n    # changing opacity\n    alpha = 0.8\n  ) +\n  # relabelling x-axis, y-axis, and title\n  labs(\n    # label x-axis\n    x = 'Ocean Temperature (°C)',\n    # label y-axis\n    y = expression(paste('Giant Kelp Frond Elongation Rate (cm day' ^-1,')')),\n    # add chart title\n    title = 'Ocean Temperature and Giant Kelp Frond Growth Correlation')"
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#c.",
+    "href": "posts/ENVS 193DS HW 03/index.html#c.",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "c.",
+    "text": "c.\n\nassumption checking\n\n# base layer: ggplot\nggplot(\n  # starting data frame\n  data = kelp,\n  # x-axis\n  mapping = aes(x = temp_c,\n                # y-axis\n                y = kelp_elong)\n) +\n  # first layer: points\n  geom_point(\n    # coloring points\n    color = 'chartreuse4',\n    # changing opacity\n    alpha = 0.8\n  ) +\n  # relabelling x-axis, y-axis, and title\n  labs(\n    # label x-axis\n    x = 'Ocean Temperature (°C)',\n    # label y-axis\n    y = expression(paste('Giant Kelp Frond Elongation Rate (cm day' ^-1,')')),\n    # add chart title\n    title = 'Ocean Temperature and Giant Kelp Frond Growth Correlation')\n\n\n\n\n\n\n\n\nBecause I plan on running a Spearmans rank correlation test, I only had to check if my data was independent and monotonic. I checked independence by ensuring that proper methodology was being used when collecting data (data collected individually, stated in Problem 1 introduction), and for a monotonic relationship by creating a visualization. After checking my assumptions, I concluded that I have independent observations, and that my data is monotonic – as ocean temperature increases, giant kelp frond elongation rate decreases.\n\n\ntest running\n\n# correlation test\ncor.test(\n  # y-variable\n  kelp$kelp_elong,\n  # x-variable\n  kelp$temp_c,\n  # use spearmans test\n  method = 'spearman',\n  # use normal p-approximation\n  exact = FALSE)\n\n\n    Spearman's rank correlation rho\n\ndata:  kelp$kelp_elong and kelp$temp_c\nS = 9216.1, p-value = 1.29e-05\nalternative hypothesis: true rho is not equal to 0\nsample estimates:\n       rho \n-0.6891684"
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#d.",
+    "href": "posts/ENVS 193DS HW 03/index.html#d.",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "d.",
+    "text": "d.\nTo evaluate the strength of the relationship between temperature and giant kelp frond elongation rate I used a Spearmans rank correlation test. I chose to use Spearmans test over Pearsons as I did not check for normality nor a linear relationship. After running the Spearmans test, I found a moderate negative relationship between ocean temperature and giant kelp frond elongation rate (Spearman \\(\\rho\\) = -0.69, S = 9216.1, p = 1.29 * 10-5, \\(\\alpha\\) = 0.05)."
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#e.",
+    "href": "posts/ENVS 193DS HW 03/index.html#e.",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "e.",
+    "text": "e.\nThere is a moderate correlation between ocean temperature and giant kelp frond elongation rate. As temperature increases, kelp frond elongation rate decreases, indicating decreased growth with warming temperatures. This information is important for giant kelp health – the ongoing climate crisis and subsequent consistently warming ocean temperatures hold significant negative implications for giant kelp health over time; without action against climate change (and warming oceans), giant kelp populations will degrade over time, potentially leading to larger-scale ecosystem damages."
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#f.",
+    "href": "posts/ENVS 193DS HW 03/index.html#f.",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "f.",
+    "text": "f.\n\nassumption checking\n\n# base layer: ggplot\nggplot(\n  # starting data frame\n  data = kelp,\n  # y-axis: kelp frond elongation rate\n  mapping = aes(sample = kelp_elong)\n) +\n  # first layer: QQ reference line\n  geom_qq_line(\n    # coloring line\n    color = 'navyblue'\n  ) +\n  # second layer: QQ points\n  geom_qq(\n    # coloring points\n    color = 'chartreuse4', \n    # changing opacity\n    alpha = 0.6\n  ) \n\n\n\n\n\n\n\n\n\n\ntest running\n\n# correlation test\ncor.test(\n  # y-variable\n  kelp$kelp_elong,\n  # x-variable\n  kelp$temp_c,\n  # use pearsons test\n  method = 'pearson')\n\n\n    Pearson's product-moment correlation\n\ndata:  kelp$kelp_elong and kelp$temp_c\nt = -5.189, df = 30, p-value = 1.366e-05\nalternative hypothesis: true correlation is not equal to 0\n95 percent confidence interval:\n -0.8359665 -0.4460157\nsample estimates:\n       cor \n-0.6877489 \n\n\nYes, both tests would have led me to the same decision – finding a moderate negative relationship and rejecting the null – as both tests resulted in a moderate negative correlation of -0.69. After running the Pearson’s test, I found a moderate negative relationship between ocean temperature and giant kelp frond elongation rate (Pearson’s r = -0.69, t(30) = -5.19, p = 1.37 * 10-5, \\(\\alpha\\) = 0.05). This conclusion is the same as my conclusion after running the Spearman’s test."
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#a.-1",
+    "href": "posts/ENVS 193DS HW 03/index.html#a.-1",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "a.",
+    "text": "a.\n\n# base layer: ggplot\nggplot(\n  # use data frame 'mz_clean'\n  data = mz_clean,\n  # x from 'working_with_others_y_n' col\n  mapping = aes(x = working_with_others_y_n,\n                # y from 'completed_v_intended' col\n                y = completed_v_intended,\n                # coloring by 'working_with_others_y_n'\n                color = working_with_others_y_n,\n                # fill by 'working_with_others_y_n'\n                fill = working_with_others_y_n)\n) +\n  # first layer: boxplot\n  geom_boxplot(\n    # reduce opacity\n    alpha = 0.75\n  ) +\n  # second layer: jitterplot\n  geom_jitter(\n    # remove vertical jitter\n    height = 0,\n    # add horizontal jitter\n    width = 0.2\n  ) +\n  # changing colors\n  scale_color_manual(\n    # 'forestgreen' for 'y'\n    values = c('y' = 'forestgreen',\n               # 'mediumvioletred' for 'n'\n               'n' = 'mediumvioletred')\n  ) +\n  # changing fill colors\n  scale_fill_manual(\n    # 'lawngreen' for 'y'\n    values = c('y' ='lawngreen',\n               # 'violetred' for n\n               'n' = 'violetred1')\n  ) +\n  # changing titles and axes names\n  labs(\n    # label x axis\n    x = 'Working with others (no/yes)',\n    # label y axis\n    y = '% of completed tasks',\n    # change title\n    title = 'Task completion seperated by work type',\n    # change subtitle\n    subtitle = '5/27/26') + \n  # remove legend\n  theme(\n    legend.position = 'none'\n  )\n\n\n\n\n\n\n\n\n\n# base layer: ggplot\nggplot(\n  # use data frame 'mz_clean'\n  data = mz_clean,\n  # x from 'mood_exhaustion_1_5' col\n  mapping = aes(x = mood_exhaustion_1_5,\n                # y from 'completed_v_intended' col\n                y = completed_v_intended,\n                # group by 'mood_exhaustion_1_5'\n                group = mood_exhaustion_1_5,\n                # fill by 'mood_exhaustion_1_5'\n                fill = mood_exhaustion_1_5,\n                color = mood_exhaustion_1_5)\n) +\n  # first layer: boxplot\n  geom_boxplot(\n    # reduce opacity\n    alpha = 0.75\n  ) +\n  # second layer: jitterplot\n  geom_jitter(\n    # remove vertical jitter\n    height = 0,\n    # add horizontal jitter\n    width = 0.2\n  ) +\n  # changing colors\n  scale_color_manual(\n    # 'darkred' for 'one'\n    values = c('a1' ='darkred',\n               # 'sienna4' for 'two'\n               'b2' = 'sienna4',\n               # 'darkgoldenrod4' for 'three'\n               'c3' = 'darkgoldenrod4',\n               # 'darkgreen' for 'four'\n               'd4' = 'darkgreen',\n               # 'navy' for 'five'\n               'e5' = 'navy')\n  ) +\n  # changing fill colors\n  scale_fill_manual(\n    # 'red' for 'one'\n    values = c('a1' ='red',\n               # 'orange' for 'two'\n               'b2' = 'orange',\n               # 'yellow' for 'three'\n               'c3' = 'yellow',\n               # 'green' for 'four'\n               'd4' = 'green')\n  ) +\n  # changing x-axis displays\n  scale_x_discrete(\n    # a1 to 1\n    labels = c('a1' = '1',\n               # b2 to 2\n               'b2' = '2',\n               # c3 to 3\n               'c3' = '3',\n               # d4 to 4\n               'd4' = '4',\n               # e5 to 5\n               'e5' = '5')\n  ) +\n  # changing titles and axes names\n  labs(\n    # label x axis\n    x = 'Mood (1-4)',\n    # label y axis\n    y = '% of completed tasks',\n    # change title\n    title = 'Task completion seperated by mood',\n    # change subtitle\n    subtitle = '5/27/26') + \n  # remove legend\n  theme(\n    legend.position = 'none'\n  )"
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#b.-1",
+    "href": "posts/ENVS 193DS HW 03/index.html#b.-1",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "b.",
+    "text": "b.\nWork type figure Caption: Task Completion Separated by Work Type. Box plots of work completion depending on environment. Pink plot represents working alone, green plot represents working with other. Each data point represents an individual measurement of completed task percentage for the day, from 4/23/26 to 5/27/26. Fences are the IQRs (25th and 75th percentiles), with the median (50th percentile) of collected data per environment as a line in between each respective box. Whiskers represent minimum and maximum values (1.5 x lower or upper IQR bound)\nMood figure Caption: Task Completion Separated by mood. Box plots of work completion depending on a mood scale of 1-4, with 1 being the lowest and 4 being the highest (within the data). Red plot is a mood of 1, orange plot is a mood of 2, yellow plot is a mood of 3, and green plot is a mood of 4. Each data point represents an individual measurement of completed task percentage for the day, from 4/23/26 to 5/27/26. Fences are the IQRs (25th and 75th percentiles), with the median (50th percentile) of collected data per environment as a line in between each respective box. Whiskers represent minimum and maximum values (1.5 x lower or upper IQR bound)"
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#a.-2",
+    "href": "posts/ENVS 193DS HW 03/index.html#a.-2",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "a.",
+    "text": "a.\nAn affective visualization for my personal data could take the form of a drawing, showing box plots – representing mood – that are being climbed/conquered by a person. For example, if a good mood leads to more work being completed, an affective visualization could show a raised large stack of papers (higher box plot) with sticky tabs sticking out (overlaid data) and a confident/smiling person lifting them above their head. Another affective visualization could be another drawing, showing a linear model – representing work completed – that is being “weighed down” by the amount of things that I have in my bag (representing the time I spend on campus). Both of these “statistical visualizations” (boxplot, linear model) would be represented via something like stacks of paper, rather than points/lines indicating work being completed. Ideally these visualizations would make the viewer understand what factors/feelings/emotions are influencing work completion, and better relate/understand the graph."
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#b.-2",
+    "href": "posts/ENVS 193DS HW 03/index.html#b.-2",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "b.",
+    "text": "b.\n\n\n\naffective-visualization-sketch"
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#c.-1",
+    "href": "posts/ENVS 193DS HW 03/index.html#c.-1",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "c.",
+    "text": "c.\n\n\n\naffective-visualization-draft"
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#d.-1",
+    "href": "posts/ENVS 193DS HW 03/index.html#d.-1",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "d. ",
+    "text": "d. \nI am showing an affective representation of how productivity changes depending on activities – in this case, I am showing productivity as stacks of papers/books being completed, and activities as a bunch of items/things (for instance, a backpack for class, climbing shoes, etc.) that increase as activities increase. I got influences from Jill Pelto’s paintings; I really liked how oftentimes data was represented as mountains/rivers/cracks on a glacier, etc. I tried to emulate something similar, showing data as a “mountain” of papers. Outside of Jill Pelto, I got influences from my daily life; the items depicted are all reflective of things that I have had to carry around for activities before. The form of my work is going to be a digital drawing – however, I currently have no access to my drawing software so I am drawing it on paper before transferring it onto my computer. To create my work, I looked at many of the items that I own, and wondered how each one could potentially tie in my actives that I do every day. People have often told me that I always carry way too many things, which made me think about why, and the relationship between my carried items, busyness, and subsequent productivity. I also added some details that I just thought would be fun, and a better representation of me – for instance, I plan to put a drawing of an album cover that I like in the background, I have a drawing of me doing work on top of the “mountain”, etc."
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#e.-1",
+    "href": "posts/ENVS 193DS HW 03/index.html#e.-1",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "e.",
+    "text": "e.\nENVS 193DS Affective Visualization Presentation"
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#a.-3",
+    "href": "posts/ENVS 193DS HW 03/index.html#a.-3",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "a.",
+    "text": "a.\nIn this paper, the researchers use multiple statistical tests to analyze the effect of landscape differences (size, disturbance, etc.) on shrew population abundance. The statistical tests that the authors are using to address their main research question are linear regression, logsitic regression, ANOVA, Shapiro-Wilk, and the Kruskal-Wallis tests. Attached below is a table created using data from a linear regression test, showing how different landscapes can impact a specifc shrews species (Notiosorex crawfordi) population distribution and abundance.\n\n\n\nlinear-regression-graph"
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#b.-3",
+    "href": "posts/ENVS 193DS HW 03/index.html#b.-3",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "b.",
+    "text": "b.\nThe table clearly represents the data underlying the tests. It displays each predictor (ex. control, density of scrubs, etc.) and the variables for each predictor used to calculate expected shrew abundance in locales displaying variations of these predictors. This clearly shows the data that the scientists used to run the tests. However, it is lacking in data showing how these variables were found, which is likely in another table."
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#c.-2",
+    "href": "posts/ENVS 193DS HW 03/index.html#c.-2",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "c.",
+    "text": "c.\nThe authors moderately handle visual clutter. While it is clear what is being displayed in the table as there is little non-data information provided, the table itself has inconsistent formatting, with misaligned numbers/columns. However, the “data:ink ratio” is very low/good – the majority of “ink” is being used to represent actual data – there is very little visual clutter relative to the information being presented. Subsequently, while the aesthetics/organization could be better, the visual clutter is low, and the data is clearly communicable."
+  },
+  {
+    "objectID": "posts/ENVS 193DS HW 03/index.html#d.-2",
+    "href": "posts/ENVS 193DS HW 03/index.html#d.-2",
+    "title": "ENVS 193DS Homework Assignment 03",
+    "section": "d.",
+    "text": "d.\nTo make this table better, I would relabel the ‘Source’ column to ‘Predictors’, reformat/align the data within the columns, and add column lines to help organize my data/make my table look neater. The first change is because the variables listed under ‘Source’ are all variables that are being used to predict shrew abundance; subsequently, changing the column title will make it clearer to the reader what they are looking at – they will not have to figure out what ‘Source’ indicates, and will have a better understanding that these variables are being used as predictors in the linear regression data. The remaining two changes are to improve table organization: currently the data is misaligned with inconsistent margins – by aligning margins, and putting clear column lines in which to align margins to, the chart will look better and be easier to read."
   }
 ]

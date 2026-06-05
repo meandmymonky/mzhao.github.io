@@ -7,7 +7,7 @@ toc: false
 about:
   template: trestles
   image-shape: round
-  image-width: 18em
+  image-width: 25em
   # creating buttons
   links:
     - icon: envelope

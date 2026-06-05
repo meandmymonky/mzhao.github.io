@@ -1,0 +1,13 @@
+---
+title: "Legal Analysis: Naples California"
+description: "This is a legal analysis representing the Gaviota Coastal Council, the Environmental Defense Center, and the Surfrider Foundation, opposing the plan of residential private development on agricultural land in Naples, Santa Barbara County."
+date: 5/27/26
+categories: [Writing]
+image: sb-naples-thumbnail.jpg
+draft: false
+---
+<p class="center-text">You can also read the paper here: [Legal Analysis - Naples California {{< fa file-pdf title= "pdf" >}}](ENVS 125C Naples Paper - Google Docs.pdf)</p>
+
+<div style="display: flex; justify-content: center; width: 100%;">
+<object data="ENVS 125C Naples Paper - Google Docs.pdf" type="application/pdf" width="80%" height="1000px"></object>
+

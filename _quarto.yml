@@ -15,8 +15,7 @@ website:
         text: Home
       - href: about.qmd
         text: About Me
-      - href: projects.qmd
-        text: Projects
+      - posts.qmd
       - href: cv.qmd
         text: CV/Resume
       - href: misc.qmd

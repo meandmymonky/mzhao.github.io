@@ -30,12 +30,226 @@ I started climbing when I came to Santa Barbara. It's quickly become one of my f
 ![](media/filip-climbing.JPG){group="jtree" width="300"}
 :::
 
-Here are some pictures from my recent trip to joshua tree. If you're interested, you can see more about this trip on the UCSB climbing team instagram [{{< fa camera title= "camera" >}}](https://www.instagram.com/ucsbclimbing/){target="_blank"} (which I run!)
+Here are some pictures from my recent trip to Joshua Tree. If you're interested, you can see more about this trip on the UCSB climbing team instagram [{{< fa camera title= "camera" >}}](https://www.instagram.com/ucsbclimbing/){target="_blank"} (which I run!)
 
 ## HIKING
 Climbing outdoors is great. But sometimes it's nice to just enjoy the nature without having to throw yourself at a wall. I also love hiking with friends, and exploring beyond the crag!
 
 [hiking map]
+
+```{r}
+
+#| label: reading-packages
+
+# importing packages
+library(tidyverse)
+library(plotly)
+library(DT)
+library(leaflet)
+library(leaflet.extras) 
+library(sf)
+
+```
+
+```{r}
+
+#| label: cleaning-sp
+
+# creating object: santa_paula
+santa_paula <- "Punchbowls_via_Santa_Paula_and_Last_Chance_Trail.gpx"
+# creating layers
+st_layers(santa_paula)
+# creating object: sp_track
+sp_track <- read_sf(santa_paula, 
+                    # use track_points data
+                    layer = "track_points") |> 
+  # separate time column
+  separate(col = time, 
+           # date category
+            into = c("date",
+                     # time point category
+                     "timepoint"), 
+            sep = " ", 
+            remove = FALSE)
+
+#| label: cleaning-db
+# creating object: devils_bridge
+devils_bridge <- "Devils_Bridge_via_Mescal_Trailhead.gpx"
+# creating layers
+st_layers(devils_bridge)
+# creating object: db_track
+db_track <- read_sf(devils_bridge, 
+                    # use track_points data
+                    layer = "track_points") |> 
+  # separate time column
+  separate(col = time, 
+           # date category
+            into = c("date",
+                     # time point category
+                     "timepoint"), 
+            sep = " ", 
+            remove = FALSE)
+
+#| label: cleaning-hs
+# creating object: devils_bridge
+hotsprings <- "Hot_Springs_Trail_and_Edison_Catway.gpx"
+# creating layers
+st_layers(hotsprings)
+# creating object: db_track
+hs_track <- read_sf(hotsprings, 
+                    # use track_points data
+                    layer = "track_points") |> 
+  # separate time column
+  separate(col = time, 
+           # date category
+            into = c("date",
+                     # time point category
+                     "timepoint"), 
+            sep = " ", 
+            remove = FALSE)
+
+#| label: cleaning-ac
+# creating object: antelope_canyon
+antelope_canyon <- "Upper_Antelope_Canyon_Trail.gpx"
+# creating layers
+st_layers(antelope_canyon)
+# creating object: db_track
+ac_track <- read_sf(antelope_canyon, 
+                    # use track_points data
+                    layer = "track_points") |> 
+  # separate time column
+  separate(col = time, 
+           # date category
+            into = c("date",
+                     # time point category
+                     "timepoint"), 
+            sep = " ", 
+            remove = FALSE)
+
+trail_points <- data.frame(
+  lat = c(34.462712, 34.8977, 34.4547, 36.8625),
+  lng = c(-119.640097, -111.8077, -119.0557, -111.3747),
+  label = c("Santa Paula Punchbowls", "Devils Bridge", "Hot Springs", "Antelope Canyon")
+)
+
+```
+
+
+```{r}
+
+#| label: ggplots
+
+# ggplot: sp_track data
+ggplot(sp_track) +
+  # layer one: sf
+  geom_sf() +
+  # changing theme
+  theme_bw()
+
+# ggplot: db_track data
+ggplot(db_track) +
+  # layer one: sf
+  geom_sf() +
+  # changing theme
+  theme_bw()
+
+# ggplot: hs_track data
+ggplot(hs_track) +
+  # layer one: sf
+  geom_sf() +
+  # changing theme
+  theme_bw()
+
+# ggplot: ac_track data
+ggplot(ac_track) +
+  # layer one: sf
+  geom_sf() +
+  # changing theme
+  theme_bw()
+
+```
+
+```{r}
+
+#| label: base-map
+
+# create trail map
+trail_map <- leaflet(trail_points) |> 
+  # use ESRI background
+  addProviderTiles(providers$Esri.WorldImagery) |> 
+  addMarkers(lng = ~lng,
+             lat = ~lat,
+             popup = ~label,
+             clusterOptions = markerClusterOptions()
+) |> 
+  # adding mini map
+  addMiniMap(toggleDisplay = TRUE, minimized = TRUE) |> 
+  setView(lng =  -117.5, lat = 38.5, zoom = 5) |> 
+    # reset map button
+  leaflet.extras::addResetMapButton()
+
+# printing map
+trail_map
+
+```
+
+
+```{r}
+
+#| label: creating-trails
+
+sp_trail <- sp_track |> 
+  st_combine() |> 
+  st_cast(to = "LINESTRING") |> 
+  st_sf()
+
+db_trail <- db_track |> 
+  st_combine() |> 
+  st_cast(to = "LINESTRING") |> 
+  st_sf()
+
+hs_trail <- hs_track |> 
+  st_combine() |> 
+  st_cast(to = "LINESTRING") |> 
+  st_sf()
+
+ac_trail <- ac_track |> 
+  st_combine() |> 
+  st_cast(to = "LINESTRING") |> 
+  st_sf()
+
+```
+
+
+```{r}
+
+#| label: adding-hikes
+
+trail_map |> 
+  addPolylines(data = sp_trail,
+               color = "chartreuse",
+               weight = 2,
+               opacity = 1.0) |> 
+  addPolylines(data = db_trail,
+               color = "chartreuse",
+               weight = 2,
+               opacity = 1.0) |> 
+  addPolylines(data = hs_trail,
+               color = "chartreuse",
+               weight = 2,
+               opacity = 1.0) |> 
+  addPolylines(data = ac_trail,
+               color = "chartreuse",
+               weight = 2,
+               opacity = 1.0)
+
+```
+
+```{r}
+# saving the prepared leaflet plot as a html file
+htmltools::save_html(trail_map, "trail.html")
+```
+
 
 Here are some of my favorite and recent hikes that I've done.
 
