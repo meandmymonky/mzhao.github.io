@@ -3,3 +3,26 @@ title: "Photos"
 format: html
 ---
 
+Absolutely mediocre photographer: here are some of the places I've been recently!
+
+# Pismo Beach
+A few pictures from my trip to Pismo. This was a wonderful trip despite the cold!
+
+::: {layout-ncol=3}
+![](media/pismo-flower.JPG){group="pismo" width="400"}
+
+![](media/pismo-surf.JPG){group="pismo" width="400"}
+
+![](media/pismo-dramatic.JPG){group="pismo" width="400"}
+:::
+
+# Joshua Tree
+Jumping around Jtree? First climbing team trip was amazing...bishop next?
+
+::: {layout-ncol=3}
+![](media/far-away.JPG){group="treej" width="400"}
+
+![](media/big rock.JPG){group="treej" width="400"}
+
+![](media/treej.JPG){group="treej" width="400"}
+:::

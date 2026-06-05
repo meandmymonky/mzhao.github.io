@@ -17,7 +17,7 @@ website:
         text: About Me
       - posts.qmd
       - href: cv.qmd
-        text: CV/Resume
+        text: Resume
       - href: misc.qmd
         text: Photos
   page-footer: 

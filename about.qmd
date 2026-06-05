@@ -3,6 +3,9 @@ title: "About Me"
 subtitle: "*A little more about me, both in and out of work*"
 lightbox: true
 match: false
+messages: false
+warning: false
+echo: false
 ---
 # EDUCATION AND RESEARCH
 I am currently an undergraduate pre-law student in my second year at UC Santa Barbara, majoring in [Environmental Studies](https://es.ucsb.edu/){target="_blank"}, [Geography](https://www.geog.ucsb.edu/){target="_blank"}, and [Philosophy](https://www.philosophy.ucsb.edu/){target="_blank"}, with a minor in [Legal Humanities](https://www.duels.ucsb.edu/minors/legal-humanities-minor){target="_blank"}. Within my fields of study, I have a particular interest in environmental policy, and love exploring how ecological research and innovations intersect with legislation to create feasible and sustainable environmental solutions. In particular, I hope to further explore the ecological processes behind larger ecosystemic regulation, and use those explorations to facilitate actionable legislative decisions pertaining to endangered species policy.
@@ -35,10 +38,8 @@ Here are some pictures from my recent trip to Joshua Tree. If you're interested,
 ## HIKING
 Climbing outdoors is great. But sometimes it's nice to just enjoy the nature without having to throw yourself at a wall. I also love hiking with friends, and exploring beyond the crag!
 
-[hiking map]
-
 ```{r}
-
+#| include: false
 #| label: reading-packages
 
 # importing packages
@@ -52,7 +53,7 @@ library(sf)
 ```
 
 ```{r}
-
+#| include: false
 #| label: cleaning-sp
 
 # creating object: santa_paula
@@ -136,8 +137,9 @@ trail_points <- data.frame(
 
 
 ```{r}
-
+#| include: false
 #| label: ggplots
+
 
 # ggplot: sp_track data
 ggplot(sp_track) +
@@ -170,8 +172,9 @@ ggplot(ac_track) +
 ```
 
 ```{r}
-
+#| include: false
 #| label: base-map
+
 
 # create trail map
 trail_map <- leaflet(trail_points) |> 
@@ -195,8 +198,9 @@ trail_map
 
 
 ```{r}
-
+#| include: false
 #| label: creating-trails
+
 
 sp_trail <- sp_track |> 
   st_combine() |> 
@@ -245,15 +249,10 @@ trail_map |>
 
 ```
 
-```{r}
-# saving the prepared leaflet plot as a html file
-htmltools::save_html(trail_map, "trail.html")
-```
 
-
-Here are some of my favorite and recent hikes that I've done.
+Here are some fun hikes that I've done recently!
 
 ## FISHING
 When I was younger, my parents would often take my brother and I fishing. My father is from Qingdao, and grew up fishing and swimming by the beach, an experience that he wanted us to have as well. Unfortunately, each of us only picked up one half of that -- my brother is great at fishing but can't really swim while I did swim team and can't really fish. But despite the fact that I'm *horrible* at fishing, I still love going out to the water to do some angling -- hopefully I'll get better soon!
 
-[fishing minigame - catch fish and tell info abt it -- all of the fish will be ones that I have caught before]
+[This is a work in progress fishing minigame. It will be club penguin-esque, and all the potential fish options are fish that I have caught before. Once caught, it will display my personal pictures with the fish, as well as some facts!]
