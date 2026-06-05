@@ -1,5 +1,15 @@
 ---
 title: "Projects"
-format: html
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
 ---
 
+boi
+
+envs 155 final proj notes
+- use WIDE diversity of sources -- like six sources bruhhh boi boi bah boi
+- central theme: what you identify in section 1 links to section 2, etc. - try not to repeat yourself
+- be as thorough and concise as you can

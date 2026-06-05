@@ -1,0 +1,24 @@
+---
+title: "map-draft"
+format: html
+---
+
+# Packages
+```{r}
+# reading in packages
+library(sf)
+library(dplyr)
+library(leaflet)    
+library(htmltools)    
+library(rnaturalearth)
+library(leaflet.extras) 
+```
+
+# Data
+```{r}
+# setting up data
+body <- data.frame(name = c(""))
+
+```
+
+

@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Megan Zhao",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "Hello! My name is Megan. Currently, I am an undergraduate student at University of California, Santa Barbara, with a passion for exploring the intersection between scientific ecology and policy development. Feel free to explore this website, and learn a bit more about me and my work!\n\n\n\nEDUCATION\n BS in Environmental Studies, 2028\nUniversity of California, Santa Barbara\n BA in Geography: Geographic Information Science (GIS), 2028\nUniversity of California, Santa Barbara\n BA in Philosophy: Ethics and Public Policy, 2028\nUniversity of California, Santa Barbara"
+    "text": "boi\nenvs 155 final proj notes - use WIDE diversity of sources – like six sources bruhhh boi boi bah boi - central theme: what you identify in section 1 links to section 2, etc. - try not to repeat yourself - be as thorough and concise as you can\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "map-draft.html",
+    "href": "map-draft.html",
+    "title": "map-draft",
+    "section": "",
+    "text": "Packages\n\n# reading in packages\nlibrary(sf)\n\nLinking to GEOS 3.14.1, GDAL 3.12.1, PROJ 9.7.1; sf_use_s2() is TRUE\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(leaflet)    \nlibrary(htmltools)    \nlibrary(rnaturalearth)\nlibrary(leaflet.extras) \n\n\n\nData\n\n# setting up data\nbody &lt;- data.frame(name = c(\"\"))"
   },
   {
     "objectID": "about.html",
@@ -40,5 +47,12 @@
     "title": "About Me",
     "section": "FISHING",
     "text": "FISHING\nWhen I was younger, my parents would often take my brother and I fishing. My father is from Qingdao, and grew up fishing and swimming by the beach, an experience that he wanted us to have as well. Unfortunately, each of us only picked up one half of that – my brother is great at fishing but can’t really swim while I did swim team and can’t really fish. But despite the fact that I’m horrible at fishing, I still love going out to the water to do some angling – hopefully I’ll get better soon!\n[fishing minigame - catch fish and tell info abt it – all of the fish will be ones that I have caught before]"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Megan Zhao",
+    "section": "",
+    "text": "Hello! My name is Megan. Currently, I am an undergraduate student at University of California, Santa Barbara, with a passion for exploring the intersection between scientific ecology and policy development. Feel free to explore this website, and learn a bit more about me and my work!\n\n\n\nEDUCATION\n BS in Environmental Studies, 2028\nUniversity of California, Santa Barbara\n BA in Geography: Geographic Information Science (GIS), 2028\nUniversity of California, Santa Barbara\n BA in Philosophy: Ethics and Public Policy, 2028\nUniversity of California, Santa Barbara"
   }
 ]
