@@ -1,5 +1,20 @@
 ---
-title: "RESUME"
+title: "RESUME/CV"
+toc: true
 ---
 
-![](mzhaoresume.pdf){width=80% height=1000}
+I am currently open for work. Please feel free to reach out about projects, internships, employment opportunities, -- I love collaborating and connecting with others on projects and ideas -- or even just to say hello! 
+
+<p class="center-text">You can also view my resume [here {{< fa file-pdf title= "pdf" >}}](mzhaoresume.pdf), and my CV [here {{< fa file-pdf title= "pdf" >}}](mzhao-cv2026.pdf)</p>
+
+
+<div style="display: flex; justify-content: center; width: 100%;">
+<div class="pdf-container">
+  <embed src="mzhaoresume.pdf" type="application/pdf" class="pdf-viewer" width="100%" height="800px">
+  <embed src="mzhao-cv2026.pdf" type="application/pdf" class="pdf-viewer" width="100%" height="800px">
+</div>
+
+
+
+
+

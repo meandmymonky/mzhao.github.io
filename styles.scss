@@ -75,3 +75,16 @@ font-weight: 550;
   max-height: 40px;
   width: auto;
 }
+
+// pdf container
+.pdf-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between the two PDFs */ /* Allows them to stack on smaller screens */
+}
+

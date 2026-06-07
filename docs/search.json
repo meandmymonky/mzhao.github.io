@@ -21,6 +21,13 @@
     "text": "Packages\n\n# reading in packages\nlibrary(sf)\n\nLinking to GEOS 3.14.1, GDAL 3.12.1, PROJ 9.7.1; sf_use_s2() is TRUE\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(leaflet)    \nlibrary(htmltools)    \nlibrary(rnaturalearth)\nlibrary(leaflet.extras) \n\n\n\nData\n\n# setting up data\nbody &lt;- data.frame(name = c(\"\"))"
   },
   {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "RESUME/CV",
+    "section": "",
+    "text": "I am currently open for work. Please feel free to reach out about projects, internships, employment opportunities, – I love collaborating and connecting with others on projects and ideas – or even just to say hello!\n\nYou can also view my resume here , and my CV here"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Me",
