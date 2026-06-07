@@ -1,5 +1,6 @@
 ---
-title: "ENVS 193DS Homework Assignment #03"
+title: "ENVS 193DS Homework Assignment 03"
+author: "Megan Zhao"
 description: "This is a homework assignment from my ENVS 193DS class, intended to help develop experience working with dataframes. It includes practicing correlation visualization, correlation calculations, visualizing personal data, developing an affective visualization, and statistical critiques. Please note discrepencies within code of text formatting using single instead of double quotes."
 date: 5/28/26
 categories: [Coding, R]
@@ -9,9 +10,6 @@ draft: false
 You can also explore the code here: [ENVS 193DS - HW 03 {{< fa file-pdf title= "pdf" >}}](ENVS-193DS_homework-03-DOC.pdf)</p>
 
 ---
-title: "ENVS 193DS Homework Assignment 03"
-author: "Megan Zhao"
-date: 5/28/26
 messages: false
 warning: false
 ---
